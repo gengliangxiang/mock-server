@@ -1,4 +1,4 @@
-import { Controller, Post, Get, HttpCode, Body } from '@nestjs/common';
+import { Controller, Post, Get, HttpCode } from '@nestjs/common';
 import { AppService } from '../../service/app.service';
 
 @Controller('encrypt')

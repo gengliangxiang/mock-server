@@ -16,6 +16,7 @@ const list = Mock.mock({
 			open: '@word',
 			channel: '@word',
 			pdNm: '@ctitle',
+			address: () => Random.province() + Random.city() + Random.county(),
 		},
 	],
 });
