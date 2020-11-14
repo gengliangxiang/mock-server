@@ -1,5 +1,5 @@
 import { Controller, Post, Get, HttpCode } from '@nestjs/common';
-import { AppService } from '../../service/app.service';
+import AppService from '../../service/app.service';
 
 @Controller('encrypt')
 export class Encrypt {
@@ -7,7 +7,7 @@ export class Encrypt {
 	@Get('publicKey')
 	@HttpCode(200)
 	get(): Object {
-		const publicKey = this.appService.getPublicKey();
+		const publicKey = this.appService.publicKey;
 		return {
 			responseCode: '200',
 			responseMessage: '操作成功',
@@ -18,7 +18,7 @@ export class Encrypt {
 	@Post('publicKey')
 	@HttpCode(200)
 	post(): Object {
-		const publicKey = this.appService.getPublicKey();
+		const publicKey = this.appService.publicKey;
 		return {
 			responseCode: '200',
 			responseMessage: '操作成功',
