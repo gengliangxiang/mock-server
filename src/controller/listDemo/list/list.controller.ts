@@ -31,9 +31,40 @@ export class ListDemo {
 		};
 	}
 
+	@Get('list')
+	@HttpCode(200)
+	getList(@Body() body, @Headers() header): Object {
+		const params = body;
+		const size = params.pageSize || 10;
+		const pages = params.pageNum || 1;
+		const start = size * (pages - 1);
+		const end = size * pages;
+		const { status } = params;
+		let records = [];
+		let total = list.records.length;
+		if (!params.status && params.status !== 0) {
+			records = list.records.slice(start, end);
+		} else {
+			total = list.records.filter((item) => item.status == status).length;
+			records = list.records.filter((item) => item.status == status).slice(start, end);
+		}
+		const data = {
+			responseCode: '200',
+			responseMessage: '操作成功',
+			responseData: {
+				total,
+				size,
+				pages,
+				current: pages,
+				records,
+			},
+		};
+
+		return data;
+	}
 	@Post('list')
 	@HttpCode(200)
-	getIncomingList(@Body() body, @Headers() header): Object {
+	postList(@Body() body, @Headers() header): Object {
 		const params = this.appService.decryptData(body.data, header.aeskey);
 		console.log('请求参数:', body);
 		console.log('解密后参数:', params);
