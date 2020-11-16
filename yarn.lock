@@ -617,7 +617,7 @@
   resolved "https://registry.npm.taobao.org/@types/cookiejar/download/@types/cookiejar-2.1.1.tgz#90b68446364baf9efd8e8349bb36bd3852b75b80"
   integrity sha1-kLaERjZLr579joNJuza9OFK3W4A=
 
-"@types/crypto-js@^4.0.1":
+"@types/crypto-js@4.0.1":
   version "4.0.1"
   resolved "https://registry.npm.taobao.org/@types/crypto-js/download/@types/crypto-js-4.0.1.tgz#3a4bd24518b0e6c5940da4e2659eeb2ef0806963"
   integrity sha1-OkvSRRiw5sWUDaTiZZ7rLvCAaWM=
@@ -694,7 +694,7 @@
   resolved "https://registry.npm.taobao.org/@types/json5/download/@types/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/jsrsasign@^8.0.8":
+"@types/jsrsasign@8.0.8":
   version "8.0.8"
   resolved "https://registry.npm.taobao.org/@types/jsrsasign/download/@types/jsrsasign-8.0.8.tgz#4b4b261a467e778c468b2eb71cfe107ce3fb72b6"
   integrity sha1-S0smGkZ+d4xGiy63HP4QfOP7crY=
@@ -2035,7 +2035,7 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
-crypto-js@^4.0.0:
+crypto-js@4.0.0:
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/crypto-js/download/crypto-js-4.0.0.tgz#2904ab2677a9d042856a2ea2ef80de92e4a36dcc"
   integrity sha1-KQSrJnep0EKFai6i74DekuSjbcw=
@@ -2080,6 +2080,11 @@ data-urls@^1.0.0:
     abab "^2.0.0"
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
+
+dayjs@^1.9.6:
+  version "1.9.6"
+  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.6.tgz#6f0c77d76ac1ff63720dd1197e5cb87b67943d70"
+  integrity sha1-bwx312rB/2NyDdEZfly4e2eUPXA=
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -4026,9 +4031,9 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jsrsasign@^10.0.5:
+jsrsasign@10.0.5:
   version "10.0.5"
-  resolved "https://registry.npm.taobao.org/jsrsasign/download/jsrsasign-10.0.5.tgz?cache=0&sync_timestamp=1604492303326&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsrsasign%2Fdownload%2Fjsrsasign-10.0.5.tgz#295cc1fb22fd0e1a269f56b6ff537459505d2ba7"
+  resolved "https://registry.npm.taobao.org/jsrsasign/download/jsrsasign-10.0.5.tgz#295cc1fb22fd0e1a269f56b6ff537459505d2ba7"
   integrity sha1-KVzB+yL9Dhomn1a2/1N0WVBdK6c=
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:

@@ -1,5 +1,6 @@
 import { Controller, Post, Get, HttpCode, Body, Headers } from '@nestjs/common';
 import * as Mock from 'mockjs';
+import * as dayjs from 'dayjs';
 import AppService from '../../../service/app.service';
 
 const { Random } = Mock;
@@ -51,6 +52,7 @@ export class ListDemo {
 		const data = {
 			responseCode: '200',
 			responseMessage: '操作成功',
+			timestamp: dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'),
 			responseData: {
 				total,
 				size,

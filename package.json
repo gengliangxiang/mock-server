@@ -29,6 +29,7 @@
     "@types/mockjs": "1.0.2",
     "cors": "2.8.5",
     "crypto-js": "4.0.0",
+    "dayjs": "^1.9.6",
     "http-proxy-middleware": "0.20.0",
     "jsrsasign": "10.0.5",
     "mockjs": "1.1.0",
