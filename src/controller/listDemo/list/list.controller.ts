@@ -1,6 +1,6 @@
 import { Controller, Post, Get, HttpCode, Body, Headers } from '@nestjs/common';
 import * as Mock from 'mockjs';
-import { AppService } from '../../../service/app.service';
+import AppService from '../../../service/app.service';
 
 const { Random } = Mock;
 const list = Mock.mock({

@@ -14,7 +14,7 @@ export default class AppService {
 	getHello(): string {
 		return 'Hello World!';
 	}
-	decryptData(word, key): Object {
+	decryptData(word, key) {
 		const crypto = KJUR.KJUR.crypto as any;
 		const aesKey = CryptoJS.enc.Utf8.parse(
 			KJUR.b64utos(crypto.Cipher.decrypt(KJUR.b64utohex(key), KJUR.KEYUTIL.getKey(privateKey)))
