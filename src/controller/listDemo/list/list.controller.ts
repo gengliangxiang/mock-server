@@ -1,4 +1,4 @@
-import { Controller, Post, Get, HttpCode, Body, Headers } from '@nestjs/common';
+import { Controller, Post, Get, HttpCode, Body, Query, Headers } from '@nestjs/common';
 import * as Mock from 'mockjs';
 import * as dayjs from 'dayjs';
 import AppService from '../../../service/app.service';
@@ -34,8 +34,9 @@ export class ListDemo {
 
 	@Get('list')
 	@HttpCode(200)
-	getList(@Body() body, @Headers() header): Object {
+	getList(@Query() body, @Headers() header): Object {
 		const params = body;
+		console.log(params);
 		const size = params.pageSize || 10;
 		const pages = params.pageNum || 1;
 		const start = size * (pages - 1);
