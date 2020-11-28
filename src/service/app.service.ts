@@ -10,10 +10,7 @@ const publicKey = key.exportKey('public');
 const privateKey = key.exportKey('private');
 
 @Injectable()
-export default class AppService {
-	getHello(): string {
-		return 'Hello World!';
-	}
+export class AppService {
 	decryptData(word, key) {
 		const crypto = KJUR.KJUR.crypto as any;
 		const aesKey = CryptoJS.enc.Utf8.parse(
@@ -26,13 +23,10 @@ export default class AppService {
 		const decrypted = CryptoJS.AES.decrypt(word, aesKey, aesParams);
 		return JSON.parse(CryptoJS.enc.Utf8.stringify(decrypted));
 	}
-	static get publicKey(): string {
-		return publicKey;
-	}
 	get publicKey(): string {
 		return publicKey;
 	}
-	static get privateKey(): string {
+	get privateKey(): string {
 		return privateKey;
 	}
 }

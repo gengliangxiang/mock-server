@@ -1,7 +1,7 @@
 import { Controller, Post, Get, HttpCode, Body, Query, Headers } from '@nestjs/common';
 import * as Mock from 'mockjs';
 import * as dayjs from 'dayjs';
-import AppService from '../../../service/app.service';
+import { AppService } from '../../../service/app.service';
 
 const { Random } = Mock;
 const list = Mock.mock({
@@ -24,13 +24,6 @@ const list = Mock.mock({
 @Controller('listDemo')
 export class ListDemo {
 	constructor(private readonly appService: AppService) {}
-	@Get('test')
-	@HttpCode(200)
-	get(@Body() body): Object {
-		return {
-			key: '23333444',
-		};
-	}
 
 	@Get('list')
 	@HttpCode(200)
@@ -65,6 +58,7 @@ export class ListDemo {
 
 		return data;
 	}
+
 	@Post('list')
 	@HttpCode(200)
 	postList(@Body() body, @Headers() header): Object {
